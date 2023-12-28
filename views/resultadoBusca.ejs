@@ -1,0 +1,22 @@
+<%- include('topo') %>
+
+  <h1>Resultado da Busca</h1>
+
+  <% if (usuarioEncontrado) { %>
+    <p>Usuário encontrado:</p>
+    <p>Nome: <%= usuarioEncontrado.nome %>
+    </p>
+    <p>Email: <%= usuarioEncontrado.email %>
+    </p>
+    <p>Login: <%= usuarioEncontrado.login %>
+    </p>
+    <p>Senha: <%= usuarioEncontrado.senha %>
+    </p>
+
+    <a href="/editar/<%= usuarioEncontrado.id %>">Editar</a>
+    <a href="/excluir/<%= usuarioEncontrado.id %>">Excluir</a>
+    <% } else { %>
+      <p>Usuário não encontrado</p>
+      <% } %>
+
+        <%- include('rodape') %>

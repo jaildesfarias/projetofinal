@@ -1,0 +1,10 @@
+<%- include('topo') %>
+
+  <h1>Buscar Usuário</h1>
+
+  <form method="post" action="/buscar">
+    <label for="nome">Busque o usuário pelo nome:</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <button type="submit">Buscar</button>
+    <%- include('rodape') %>
